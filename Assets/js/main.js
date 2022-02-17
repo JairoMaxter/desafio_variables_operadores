@@ -16,12 +16,19 @@ const multiFuncion = function (num1, num2){
     };
 }
 
-console.log(`Con los numeros ${num1}, ${num2} podemos obtener lo siguiente \n` +
+console.log(`Con los numeros ${num1} y ${num2} podemos obtener lo siguiente \n` +
             `Sumandolos dan ${multiFuncion(num1,num2).suma} \n` +
             `Restandolos dan ${multiFuncion(num1,num2).resta}\n` +
             `Multiplicandolos dan ${multiFuncion(num1,num2).multi}\n` +
             `Dividiendolos dan ${multiFuncion(num1,num2).divi}\n` +
             `Su restos dan ${multiFuncion(num1,num2).modu}`);
+
+document.write(`Con los numeros ${num1} y ${num2} podemos obtener lo siguiente \n` +
+`Sumandolos dan ${multiFuncion(num1,num2).suma} \n` +
+`Restandolos dan ${multiFuncion(num1,num2).resta}\n` +
+`Multiplicandolos dan ${multiFuncion(num1,num2).multi}\n` +
+`Dividiendolos dan ${multiFuncion(num1,num2).divi}\n` +
+`Su restos dan ${multiFuncion(num1,num2).modu} `);
 
 //---------------------------------------------------------------------------------------
 
@@ -39,12 +46,14 @@ const temk = function (temc) {
 
 console.log(`${temc}°c equivalen a ${temf(temc)}°F o a ${temk(temc)}°k`);
 
+document.write(`${temc}°c equivalen a ${temf(temc)}°F o a ${temk(temc)}°k `);
+
 //----------------------------------------------------------------------------------------
 
 var dias = parseInt(prompt("introduce el numero de dias"));
 
 const asd = function (dias) {
-
+    
     let a = Math.trunc(dias / 365);
     let s = Math.trunc((dias % 365) / 7);
     let d = ((dias % 365) % 7)
@@ -57,6 +66,7 @@ const asd = function (dias) {
 }
 
 console.log(`${dias} dias son equivalentes a ${asd(dias).anio} años ${asd(dias).semana} semanas y ${asd(dias).dia} dias`);
+document.write(`${dias} dias son equivalentes a ${asd(dias).anio} años ${asd(dias).semana} semanas y ${asd(dias).dia} dias `);
 
 //----------------------------------------------------------------------------------------
 let arrayDeCaracteres = prompt("introduce los numeros separados por comas").split(",");
@@ -81,4 +91,6 @@ let arrayDeNumeros = function (arrayDeCaracteres) {
 }
 
 console.log(`La suma de ${arrayDeCaracteres} es igual a ${arrayDeNumeros(arrayDeCaracteres).suma} y el promedio estos ${arrayDeNumeros(arrayDeCaracteres).terminos} numeros es igual a ${arrayDeNumeros(arrayDeCaracteres).promedio}`);
+document.write(`La suma de ${arrayDeCaracteres} es igual a ${arrayDeNumeros(arrayDeCaracteres).suma} y el promedio estos ${arrayDeNumeros(arrayDeCaracteres).terminos} numeros es igual a ${arrayDeNumeros(arrayDeCaracteres).promedio}`)
+
 //console.log(typeof(arrayDeNumeros(arrayDeCaracteres).terminos));
